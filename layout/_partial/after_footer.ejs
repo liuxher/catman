@@ -41,7 +41,7 @@ $(document).ready(function(){
     m.removeClass('moveMain');
   });
   $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
+    o.css("top",Math.max(80,208-$(this).scrollTop()));
   });
 });
 </script>
@@ -50,12 +50,18 @@ $(document).ready(function(){
 $(document).ready(function(){ 
   var ai = $('.article-content>iframe'),
       ae = $('.article-content>embed'),
+      m = $('#main'),
+      a = $('#asidepart'),
       t  = $('#toc'),
       h  = $('article h2')
       ah = $('article h2'),
       ta = $('#toc.toc-aside'),
       o  = $('.openaside'),
       c  = $('.closeaside');
+  m.addClass('moveMain');
+  a.css('display', 'none').addClass('fadeOut');
+  o.css('display', 'block');
+  ta.css('display', 'block').addClass('fadeIn');
   if(ai.length>0){
     ai.wrap('<div class="video-container" />');
   };
@@ -148,26 +154,7 @@ $(document).ready(function(){
 </script>
 <% } %>
 <% if ((page.layout=='post'||page.layout=='page')&&theme.fancybox){ %>
-<link rel="stylesheet" href="http://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" media="screen" type="text/css">
-<script src="http://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
-  }
-}); 
-</script>
+<%- partial('fancybox') %>
 <% } %>
 <% if (page.mathjax){ %>
 <%- partial('mathjax') %>
