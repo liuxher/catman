@@ -2,7 +2,7 @@
 
 Catman is a responsive theme for Hexo based on [Pacman](https://github.com/A-limon/pacman).
 
-Demo || [Leaf's Blog](http://blog.leafh.pw/)
+[Demo](http://blog.leafh.pw/catman/) || [Leaf's Blog](http://blog.leafh.pw/)
 
 ##Installation
 ###Install
