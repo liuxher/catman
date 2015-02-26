@@ -2,9 +2,6 @@
 menu:
   Home: /
   Archives: /archives
-  Tags: /tags
-  Categories: /categories
-  About: /about
 ## you can create `tags` and `categories` folders in `../source`.
 ## And create a `index.md` file in each of them.
 ## set `front-matter`as
@@ -42,6 +39,18 @@ author_img_data: ''
 author_img: img/author.jpg ## size:220px*220px.
 ## if the picture's format is `.png` or `.jpg`  instead of dataURI,you should set the `dataURI` value to false.
 
+#### Author information
+author:
+  google_plus: ## eg:106117262320878386876 for https://plus.google.com/u/0/106117262320878386876
+  intro_line1: ## eg: "Math&Code"
+  intro_line2: ## eg: "Photo&Music"
+  weibo: ## e.g. leafhsiao for http://weibo.com/leafhsiao
+  twitter: ## e.g. LLLLeaf for https://twitter.com/LLLLeaf
+  github: ## e.g. leaf-hsiao for https://github.com/leaf-hsiao
+  facebook: ## e.g. leaf.hsiao.9 for https://favebook.com/leaf.hsiao.9
+  tsina: ## e.g. leafhsiao  Your weibo ID,It will be used in share button.
+  linkedin:  ## e.g. in/jeffweiner08 for https://www.linkedin.com/in/jeffweiner08
+
 #### Font
 ShowCustomFont: true  
 ## you can change custom font in `variable.styl` and `font.styl` which in the theme folder `/catman/source/css`.
@@ -58,18 +67,6 @@ fancybox: false
 ## if you use gallery post or want use fancybox please set the value to true.
 ## if you want use fancybox in ANY post please copy the file `fancybox.js`.
 ## in theme folder `/catman/scripts` to your hexo blog folder `../scritps`.
-
-#### Author information
-author:
-  google_plus: ## eg:106117262320878386876 for https://plus.google.com/u/0/106117262320878386876
-  intro_line1: ## eg: "Math&Code"
-  intro_line2: ## eg: "Photo&Music"
-  weibo: ## e.g. leafhsiao for http://weibo.com/leafhsiao
-  twitter: ## e.g. LLLLeaf for https://twitter.com/LLLLeaf
-  github: ## e.g. leaf-hsiao for https://github.com/leaf-hsiao
-  facebook: ## e.g. leaf.hsiao.9 for https://favebook.com/leaf.hsiao.9
-  tsina: ## e.g. leafhsiao  Your weibo ID,It will be used in share button.
-  linkedin:  ## e.g. in/jeffweiner08 for https://www.linkedin.com/in/jeffweiner08
 
 #### Comment
 duoshuo: 
