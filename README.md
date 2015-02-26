@@ -26,6 +26,9 @@ Modify settings in  `/themes/jacman/_config.yml`.
 menu:
   Home: /
   Archives: /archives
+  Tags: /tags
+  Categories: /categories
+  About: /about
 ## you can create `tags` and `categories` folders in `../source`.
 ## And create a `index.md` file in each of them.
 ## set `front-matter`as
@@ -35,14 +38,16 @@ menu:
 
 #### Widgets
 widgets: 
+- tagcloud
+- rss
 - category
 - tag
-- rss
+- links
 ## provide six widgets:category,tag,rss,archive,tagcloud,links.
 ## modify links in `/layout/_widget/links.ejs`.
 
 #### RSS
-rss: /atom.xml ## RSS address.
+rss: /atom.xml## RSS address.
 
 #### Image
 imglogo:
@@ -73,7 +78,7 @@ toc:
 ## if you don't want display contents in a specified post,you can modify `front-matter` and add `toc: false`.
 
 #### Fancybox
-fancybox: true
+fancybox: false
 ## if you use gallery post or want use fancybox please set the value to true.
 ## if you want use fancybox in ANY post please copy the file `fancybox.js`.
 ## in theme folder `/catman/scripts` to your hexo blog folder `../scritps`.
@@ -88,6 +93,7 @@ author:
   github: ## e.g. leaf-hsiao for https://github.com/leaf-hsiao
   facebook: ## e.g. leaf.hsiao.9 for https://favebook.com/leaf.hsiao.9
   tsina: ## e.g. leafhsiao  Your weibo ID,It will be used in share button.
+  linkedin:  ## e.g. in/jeffweiner08 for https://www.linkedin.com/in/jeffweiner08
 
 #### Comment
 duoshuo: 
@@ -98,7 +104,7 @@ duoshuo:
 jiathis:
   enable: false ## if you use jiathis as your share tool,the built-in share tool won't be display.
   id:    ## e.g. 1501277 your jiathis ID. 
-  tsina: ## e.g. leaf-hsiao Your weibo id,It will be used in share button.
+  tsina: ## e.g. 1664838973 Your weibo id,It will be used in share button.
 
 #### Analytics
 google_analytics:
@@ -123,9 +129,10 @@ google_cse:
 ## ---
 swift_search:
     enable: false
+  id: ## e.g. sSFdHE8NyqRzN9ytSTQd your Custom Search ID
 
 #Mathjax
-mathjax: true
+mathjax: false
 # Add
 # mathjax: true
 # in the 'front-matter' if you need that
