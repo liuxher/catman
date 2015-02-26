@@ -59,9 +59,8 @@ $(document).ready(function(){
       o  = $('.openaside'),
       c  = $('.closeaside');
   m.addClass('moveMain');
-  a.css('display', 'none').addClass('fadeOut');
+  a.css('display', 'none').addClass('fadeIn');
   o.css('display', 'block');
-  ta.css('display', 'block').addClass('fadeIn');
   if(ai.length>0){
     ai.wrap('<div class="video-container" />');
   };
@@ -71,6 +70,7 @@ $(document).ready(function(){
   if(ah.length==0){
     t.css('display','none');
   }else{
+    ta.css('display', 'block').addClass('fadeIn');
     c.click(function(){
       ta.css('display', 'block').addClass('fadeIn');
     });
@@ -78,7 +78,7 @@ $(document).ready(function(){
       ta.css('display', 'none');
     });
     $(window).scroll(function(){
-      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+      ta.css("top",Math.max(140,250-$(this).scrollTop()));
     });
   };
 });
