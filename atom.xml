@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Catman Theme Test]]></title>
+  <title><![CDATA[Catman]]></title>
   <subtitle><![CDATA[Demo for catman]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.leafh.pw/catman/"/>
-  <updated>2015-02-26T10:27:23.033Z</updated>
+  <updated>2015-02-26T11:56:46.121Z</updated>
   <id>http://blog.leafh.pw/catman/</id>
   
   <author>
@@ -13,6 +13,170 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[使用Catman]]></title>
+    <link href="http://blog.leafh.pw/catman/2015/02/26/using-catman/"/>
+    <id>http://blog.leafh.pw/catman/2015/02/26/using-catman/</id>
+    <published>2015-02-26T09:22:01.000Z</published>
+    <updated>2015-02-26T11:53:29.039Z</updated>
+    <content type="html"><![CDATA[<h1 id="介绍">介绍</h1>
+<p><a href="http://blog.leafh.pw/catman/" target="_blank" rel="external">Catman</a> 是一款基于扁平化，有着响应式设计的 <a href="https://github.com/A-limon/pacman" target="_blank" rel="external">Pacman</a> 主题修改而来的主题。源码托管在<a href="https://github.com/leaf-hsiao/catman" target="_blank" rel="external">Github</a>上，欢迎Fork，如有问题或意见请发表 <a href="https://github.com/leaf-hsiao/catman/issues" target="_blank" rel="external">issue</a>，或者直接<a href="http://blog.leafh.pw/about/" target="_blank" rel="external">联系我</a><br>在 <a href="https://github.com/A-limon/pacman" target="_blank" rel="external">Pacman</a> 的基础上我修改了部分样式，增添了许多功能（将持续更新下去）并且将慢慢把一些公共库或字体部署到CDN上，将主题轻量化</p>
+<h1 id="安装指南">安装指南</h1>
+<h2 id="安装">安装</h2>
+<p>在根目录下执行<br>    $ git clone <a href="https://github.com/leaf-hsiao/catman.git" target="_blank" rel="external">https://github.com/leaf-hsiao/catman.git</a> themes/catman<br><strong>Pacman需要安装Hexo 2.4.5 或以上版本</strong> 请先升级您的Hexo程序，再启用此主题。</p>
+<h2 id="启用">启用</h2>
+<p>修改你的博客根目录下的<code>config.yml</code>配置文件中的<code>theme</code>属性，将其设置为<code>catman</code>。同时请设置<code>stylus</code>属性中的<code>compress</code>值为<code>true</code> ，这样可以自动压缩 CSS 文件</p>
+<h2 id="更新">更新</h2>
+<pre><code><span class="built_in">cd</span> themes/catman
+git pull origin master
+</code></pre><p><strong>升级前请先备份你的<code>_config.yml</code> 文件</strong></p>
+<h1 id="配置指南">配置指南</h1>
+<p>Catman主题提供了丰富的配置属性，配置文件_config.yml位于主题根目录下。</p>
+<pre><code><span class="comment">##### Menu</span>
+menu:
+  Home: /
+  Archives: /archives
+<span class="comment">## you can create `tags` and `categories` folders in `../source`.</span>
+<span class="comment">## And create a `index.md` file in each of them.</span>
+<span class="comment">## set `front-matter`as</span>
+<span class="comment">## layout: tags (or categories)</span>
+<span class="comment">## title: tags (or categories)</span>
+<span class="comment">## ---</span>
+
+<span class="comment">#### Widgets</span>
+widgets: 
+- tagcloud
+- rss
+- category
+- tag
+- links
+<span class="comment">## provide six widgets:category,tag,rss,archive,tagcloud,links.</span>
+<span class="comment">## modify links in `/layout/_widget/links.ejs`.</span>
+
+<span class="comment">#### RSS</span>
+rss: /atom.xml<span class="comment">## RSS address.</span>
+
+<span class="comment">#### Image</span>
+imglogo:
+  enable: <span class="constant">true</span>             <span class="comment">## display image logo true/false.</span>
+  src: img/logo.svg        <span class="comment">## `.svg` and `.png` are recommended,please put image into the theme folder `/catman/source/img`.</span>
+favicon: img/favicon.ico   <span class="comment">## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/catman/source/img`.     </span>
+apple_icon: img/catman.jpg <span class="comment">## size:114px*114px,please put image into the theme folder `/catman/source/img`.</span>
+
+<span class="comment">#### Author Avatar Picture</span>
+author_img_enable: <span class="constant">true</span> <span class="comment">## display author avatar picture</span>
+dataURI: <span class="constant">false</span>
+<span class="comment">## if the picture's format is dataURI please set the value to true,otherwise set the value to false.</span>
+<span class="comment">## convert an image into base 64 data URIs http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/ .</span>
+author_img_data: ''
+<span class="comment">## paste the dataURI in ONE LINE and included it by ''.</span>
+author_img: img/author.jpg <span class="comment">## size:220px*220px.</span>
+<span class="comment">## if the picture's format is `.png` or `.jpg`  instead of dataURI,you should set the `dataURI` value to false.</span>
+
+<span class="comment">#### Font</span>
+ShowCustomFont: <span class="constant">true</span>  
+<span class="comment">## you can change custom font in `variable.styl` and `font.styl` which in the theme folder `/catman/source/css`.</span>
+
+<span class="comment">#### Toc</span>
+toc:
+  article: <span class="constant">true</span>   <span class="comment">## show contents in article.</span>
+  aside: <span class="constant">true</span>     <span class="comment">## show contents in aside.</span>
+<span class="comment">## you can set both of the value to true of neither of them.</span>
+<span class="comment">## if you don't want display contents in a specified post,you can modify `front-matter` and add `toc: false`.</span>
+
+<span class="comment">#### Fancybox</span>
+fancybox: <span class="constant">false</span>
+<span class="comment">## if you use gallery post or want use fancybox please set the value to true.</span>
+<span class="comment">## if you want use fancybox in ANY post please copy the file `fancybox.js`.</span>
+<span class="comment">## in theme folder `/catman/scripts` to your hexo blog folder `../scritps`.</span>
+
+<span class="comment">#### Author information</span>
+author:
+  google_plus: <span class="comment">## eg:106117262320878386876 for https://plus.google.com/u/0/106117262320878386876</span>
+  intro_line1: <span class="comment">## eg: "Math&amp;Code"</span>
+  intro_line2: <span class="comment">## eg: "Photo&amp;Music"</span>
+  weibo: <span class="comment">## e.g. leafhsiao for http://weibo.com/leafhsiao</span>
+  twitter: <span class="comment">## e.g. LLLLeaf for https://twitter.com/LLLLeaf</span>
+  github: <span class="comment">## e.g. leaf-hsiao for https://github.com/leaf-hsiao</span>
+  facebook: <span class="comment">## e.g. leaf.hsiao.9 for https://favebook.com/leaf.hsiao.9</span>
+  tsina: <span class="comment">## e.g. leafhsiao  Your weibo ID,It will be used in share button.</span>
+  linkedin:  <span class="comment">## e.g. in/jeffweiner08 for https://www.linkedin.com/in/jeffweiner08</span>
+
+<span class="comment">#### Comment</span>
+duoshuo: 
+  enable: <span class="constant">false</span> <span class="comment">## duoshuo.com</span>
+  short_name: <span class="comment">## duoshuo short name.</span>
+
+<span class="comment">#### Share button</span>
+jiathis:
+  enable: <span class="constant">false</span> <span class="comment">## if you use jiathis as your share tool,the built-in share tool won't be display.</span>
+  <span class="property">id</span>:    <span class="comment">## e.g. 1501277 your jiathis ID. </span>
+  tsina: <span class="comment">## e.g. 1664838973 Your weibo id,It will be used in share button.</span>
+
+<span class="comment">#### Analytics</span>
+google_analytics:
+  enable: <span class="constant">false</span>
+  <span class="property">id</span>:   <span class="comment">## e.g. UA-1766729-8 your google analytics ID.</span>
+  site: <span class="comment">## e.g. yangjian.me your google analytics site or set the value as auto.</span>
+<span class="comment">## You MUST upgrade to Universal Analytics first!</span>
+<span class="comment">## https://developers.google.com/analytics/devguides/collection/upgrade/?hl=zh_CN</span>
+baidu_tongji:
+    enable: <span class="constant">false</span>
+    <span class="property">id</span>: <span class="comment">## e.g. 24acf16ea7dbfdbf06706025545fab07 your baidu tongji id</span>
+
+<span class="comment">#### Custom Search</span>
+google_cse: 
+  enable: <span class="constant">false</span>
+  cx: <span class="comment">## e.g. 017960104424732819065:ypw4slmkl7g your Custom Search ID</span>
+<span class="comment">## https://www.google.com/cse/ </span>
+<span class="comment">## To enable the custom search You must create a "search" folder in '/source' and a "index.md" file</span>
+<span class="comment">## set the 'front-matter' as</span>
+<span class="comment">## layout: search </span>
+<span class="comment">## title: search</span>
+<span class="comment">## ---</span>
+swift_search:
+    enable: <span class="constant">false</span>
+  <span class="property">id</span>: <span class="comment">## e.g. sSFdHE8NyqRzN9ytSTQd your Custom Search ID</span>
+
+<span class="comment">#Mathjax</span>
+mathjax: <span class="constant">false</span>
+<span class="comment"># Add</span>
+<span class="comment"># mathjax: true</span>
+<span class="comment"># in the 'front-matter' if you need that</span>
+</code></pre><h2 id="配置说明">配置说明</h2>
+<ul>
+<li><p>menu：<br>默认没有启用<code>/tags</code> 和 <code>/categories</code> 页面，如果需要启用请在博客目录下的<code>source</code>文件夹中分别建立<code>tags</code> 和 <code>categories</code>文件夹每个文件夹中分别包含一个<code>index.md</code>文件。内容为：</p>
+<p> layout: tags (或categories)</p>
+<h2 id="_title:_tags_(或categories)"> title: tags (或categories)</h2>
+</li>
+</ul>
+<p>因为主题中已经内置了这两个页面的模板，所以他们会被正确的解析出来。</p>
+<ul>
+<li>widgets:提供了6种小工具<br>友情链接请到主题目录下的<code>/layout/_widget/links.ejs</code>文件中自行添加。</li>
+<li>rss: 请填写你博客的RSS地址。而且要在hexo中安装相应的plugin</li>
+<li>imglogo: 建议启用图片logo，格式建议为<code>.svg</code>或<code>.png</code>格式。同时建议提供配套的favicon以及在苹果设备上的图标（背景不要透明）。</li>
+<li>author_img_enable: 是否显示底部的作者头像。主题支持头像使用dataURI格式，若使用请修改<code>dataURI</code>的值为<code>true</code>并在下面的<code>author_img_data</code>后填上图片的值，确保它是一行而且被引号包住如果还是想用传统的<code>jpg</code>格式那么就把图片路径放在<code>author_img</code>后，同时把<code>dataURI</code>设置成<code>false</code>。</li>
+<li>author: 请尽量填写完整</li>
+<li>ShowCustomFont: 自定义字体,如果你有一定前端基础可以修改<code>font.styl</code>替换为你喜欢的字体。</li>
+<li>fancybox:如果你使用Hexo经常发表Gallery类型的文章，那么请设置为true（同时需要复制fancybox.js到你的博客目录下scripts文件夹中）。</li>
+<li>duoshuo: <a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>评论系统。在大陆地区更好用的评论系统，如果你想更换为disqus请参考默认主题后自行修改。</li>
+<li>jiathis: <a href="http://www.jiathis.com/" target="_blank" rel="external">加网</a>分享系统。默认关闭，因为主题已经内置了原生的分享功能。</li>
+<li>Analytics 内置了google analytics和百度统计</li>
+<li>custom search 内置了google cse和swift search推荐使用后者,能自动抓取 RSS 或 sitemap并且能方便的自定义，本主题也为swift search重写了样式</li>
+<li>mathjax 可在文中写 LaTex 公式,如果需要启用要在文章的<code>front-matter</code>中加上<code>mathjax: true</code>（代码根据 Math StackExchange 所用修改而来）</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="介绍">介绍</h1>
+<p><a href="http://blog.leafh.pw/catman/" target="_blank" rel="external">Catman</a> 是一款基于扁平化，有着响应式设计的 <a href="https://g]]>
+    </summary>
+    
+      <category term="hexo" scheme="http://blog.leafh.pw/catman/tags/hexo/"/>
+    
+      <category term="Notes" scheme="http://blog.leafh.pw/catman/categories/Notes/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Images]]></title>
