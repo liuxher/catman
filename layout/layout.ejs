@@ -35,14 +35,14 @@
       <header>
         <%- partial('_partial/header') %>
       </header>
-      <div id="container">
+      <div id="container" class="page">
         <% if(theme.google_cse.enable) { %>
-        <div  id="main" class="page">
+        <div  id="main">
         <div id='cse' style='width:100%;text-align:center'>正在加载搜索结果，请稍等。</div>
         </div>
         <% }else if (theme.swift_search.enable){ %>
         <div id="container" class="page">
-        <div id="st-results-container" style="width:80%">正在加载搜索结果，请稍等。</div>
+        <div id="st-results-container" style='width:70%'>正在加载搜索结果，请稍等。</div>
         <% } %>
       </div>
       <%- partial('_partial/after_footer') %>
