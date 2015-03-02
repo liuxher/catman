@@ -57,10 +57,13 @@ $(document).ready(function(){
       ah = $('article h2'),
       ta = $('#toc.toc-aside'),
       o  = $('.openaside'),
-      c  = $('.closeaside');
-  m.addClass('moveMain');
-  a.css('display', 'none').addClass('fadeIn');
-  o.css('display', 'block');
+      c  = $('.closeaside'),
+      w  = $(window).width();
+  if ( w>1070 ) {
+  	m.addClass('moveMain');
+  	a.css('display', 'none').addClass('fadeIn');
+  	o.css('display', 'block');
+  };
   if(ai.length>0){
     ai.wrap('<div class="video-container" />');
   };
@@ -70,7 +73,9 @@ $(document).ready(function(){
   if(ah.length==0){
     t.css('display','none');
   }else{
-    ta.css('display', 'block').addClass('fadeIn');
+  	if ( w>1070 ) {
+  	  ta.css('display', 'block').addClass('fadeIn');
+  	};
     c.click(function(){
       ta.css('display', 'block').addClass('fadeIn');
     });
@@ -112,6 +117,26 @@ $(document).ready(function(){
   });
 });     
 </script>
+<script type="text/javascript">
+  (function($) {
+  var upperLimit = 1000;
+  var scrollElem = $('#top');
+  var scrollSpeed = 500;
+  scrollElem.hide();
+  $(window).scroll(function () {
+  var scrollTop = $(document).scrollTop();
+  if ( scrollTop > upperLimit ) {
+  $(scrollElem).stop().fadeTo(300, 1);
+  }
+  else{
+    $(scrollElem).stop().fadeTo(300, 0);
+  }
+});
+$(scrollElem).click(function(){
+$('html, body').animate({scrollTop:0}, scrollSpeed); return false;
+});
+})(jQuery);
+</script> 
 <% } %>
 <% if ((page.layout=='post'||page.layout=='page')&&theme.duoshuo.enable && page.comments){ %>
 <script type="text/javascript">
@@ -124,7 +149,7 @@ $(document).ready(function(){
     (document.getElementsByTagName('head')[0] 
     || document.getElementsByTagName('body')[0]).appendChild(ds);
   })();
-</script> 
+</script>
 <% } %>
 <% if (page.layout=='tags'||page.layout=='categories'){ %>
 <script type="text/javascript">
