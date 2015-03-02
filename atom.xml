@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Demo for catman]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://blog.leafh.pw/catman/"/>
-  <updated>2015-02-26T12:48:03.770Z</updated>
+  <updated>2015-03-02T10:45:33.653Z</updated>
   <id>http://blog.leafh.pw/catman/</id>
   
   <author>
@@ -19,12 +19,14 @@
     <link href="http://blog.leafh.pw/catman/2015/02/26/using-catman/"/>
     <id>http://blog.leafh.pw/catman/2015/02/26/using-catman/</id>
     <published>2015-02-26T09:22:01.000Z</published>
-    <updated>2015-02-26T12:47:06.225Z</updated>
+    <updated>2015-03-02T10:39:23.711Z</updated>
     <content type="html"><![CDATA[<h1 id="介绍">介绍</h1>
 <p><a href="http://blog.leafh.pw/catman/" target="_blank" rel="external">Catman</a> 是一款基于扁平化，有着响应式设计的 <a href="https://github.com/A-limon/pacman" target="_blank" rel="external">Pacman</a> 主题修改而来的主题。源码托管在<a href="https://github.com/leaf-hsiao/catman" target="_blank" rel="external">Github</a>上，欢迎Fork，如有问题或意见请发表 <a href="https://github.com/leaf-hsiao/catman/issues" target="_blank" rel="external">issue</a>，或者直接<a href="http://blog.leafh.pw/about/" target="_blank" rel="external">联系我</a>你可以在<a href="http://blog.leafh.pw/catman/" target="_blank" rel="external">DEMO</a>上观看效果<br>在 <a href="https://github.com/A-limon/pacman" target="_blank" rel="external">Pacman</a> 的基础上我修改了部分样式，增添了许多功能（将持续更新下去）并且将慢慢把一些公共库或字体部署到CDN上，将主题轻量化</p>
 <h1 id="安装指南">安装指南</h1>
 <h2 id="安装">安装</h2>
-<p>在根目录下执行<br>    $ git clone <a href="https://github.com/leaf-hsiao/catman.git" target="_blank" rel="external">https://github.com/leaf-hsiao/catman.git</a> themes/catman<br><strong>Pacman需要安装Hexo 2.4.5 或以上版本</strong> 请先升级您的Hexo程序，再启用此主题。</p>
+<p>在根目录下执行</p>
+<pre><code>$ git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/leaf-hsiao/catman.git themes/catman
+</code></pre><p><strong>Pacman需要安装Hexo 2.4.5 或以上版本</strong> 请先升级您的Hexo程序，再启用此主题。</p>
 <h2 id="启用">启用</h2>
 <p>修改你的博客根目录下的<code>config.yml</code>配置文件中的<code>theme</code>属性，将其设置为<code>catman</code>。同时请设置<code>stylus</code>属性中的<code>compress</code>值为<code>true</code> ，这样可以自动压缩 CSS 文件</p>
 <h2 id="更新">更新</h2>
