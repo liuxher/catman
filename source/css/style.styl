@@ -1,7 +1,6 @@
 @import 'nib'
 global-reset()
 @import '_base/variable'
-@import '_base/font'
 @import '_base/public'
 @import '_partial/header'
 @import '_partial/index'
@@ -9,10 +8,11 @@ global-reset()
 @import '_partial/helper'
 @import '_partial/aside'
 @import '_partial/footer'
-@import '_partial/search'
 if highlight
   @import '_base/code'
 if duoshuo
   @import '_partial/duoshuo'
 if fancybox
   @import '_partial/gallery'
+if swift_search enable
+  @import '_partial/swift_search'
