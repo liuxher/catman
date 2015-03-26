@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Catman]]></title>
   <subtitle><![CDATA[Demo for catman]]></subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/catman/atom.xml" rel="self"/>
   <link href="http://blog.leafh.pw/catman/"/>
-  <updated>2015-03-26T17:15:16.294Z</updated>
+  <updated>2015-03-26T17:23:44.843Z</updated>
   <id>http://blog.leafh.pw/catman/</id>
   
   <author>
