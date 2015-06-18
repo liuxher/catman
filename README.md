@@ -9,7 +9,7 @@ Catman is a responsive theme for Hexo based on [Pacman](https://github.com/A-lim
 ```
 $ git clone https://github.com/leaf-hsiao/catman.git
 ```
-**Jacman requires Hexo 2.7 and above.** 
+**Catman requires Hexo 2.7 and above.** 
 ###Enable
 Modify `theme` setting in blog folder` _config.yml` to `catman`.
 ###Update
