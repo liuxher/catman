@@ -20,7 +20,7 @@ git pull origin master
 **please backup your `_config.yml` file before update.** 
 ##Configuration
 
-Modify settings in  `/themes/jacman/_config.yml`. 
+Modify settings in  `/themes/catman/_config.yml`. 
 ```
 ##### Menu
 menu:
